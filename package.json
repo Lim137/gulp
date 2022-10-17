@@ -18,7 +18,9 @@
   },
   "homepage": "https://github.com/Lim137/Portf#readme",
   "devDependencies": {
-    "del": "^6.1.1",
-    "gulp": "^4.0.2"
+    "del": "^7.0.0",
+    "gulp": "^4.0.2",
+    "gulp-file-include": "^2.3.0",
+    "gulp-replace": "^1.1.3"
   }
 }
