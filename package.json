@@ -1,0 +1,24 @@
+{
+  "name": "portf",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lim137/Portf.git"
+  },
+  "author": "Lim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lim137/Portf/issues"
+  },
+  "homepage": "https://github.com/Lim137/Portf#readme",
+  "devDependencies": {
+    "del": "^6.1.1",
+    "gulp": "^4.0.2"
+  }
+}
