@@ -11,21 +11,28 @@ export const html = () => {
 		)
 		.pipe(fileInclude())
 		.pipe(app.plugins.replace(/@img\//g, 'img/'))
-		.pipe(webphtmlNosvg())
 		.pipe(
-			versionNumber({
-				'value': '%DT%',
-				'append': {
-					'key': '_v',
-					'to': [
-						'css',
-						'js',
-					]
-				},
-				'output': {
-					'file': 'gulp/version.json'
-				}
-			})
+			app.plugins.if(
+				app.isBuild,
+				webphtmlNosvg()
+			)
+		)
+		.pipe(
+			app.plugins.if(
+				app.isBuild,
+				versionNumber({
+					'value': '%DT%',
+					'append': {
+						'key': '_v',
+						'to': [
+							'css',
+							'js',
+						]
+					},
+					'output': {
+						'file': 'gulp/version.json'
+					}
+				}))
 		)
 		.pipe(app.gulp.dest(app.path.build.html))
 		.pipe(app.plugins.browsersync.stream());

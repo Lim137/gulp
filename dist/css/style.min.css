@@ -1,1 +1,6 @@
-body{background-image:url(../img/background1.svg)}body span{color:red}
+body {
+  background-image: url("../img/background1.svg");
+}
+body span {
+  color: red;
+}
